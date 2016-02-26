@@ -1183,6 +1183,18 @@ namespace System.Data.SqlClient
             // delegate the rest of the work to the SqlStatistics class
             Statistics.UpdateStatistics();
         }
+
+        /*
+                //TODO: Override DbProviderFactory after adding a contract
+                override protected DbProviderFactory DbProviderFactory
+                {
+                    get
+                    {
+                        return SqlClientFactory.Instance;
+                    }
+                }
+        */
+        
     } // SqlConnection
 } // System.Data.SqlClient namespace
 

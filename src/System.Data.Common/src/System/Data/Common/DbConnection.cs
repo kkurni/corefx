@@ -168,5 +168,24 @@ namespace System.Data.Common
         {
             return CreateDbCommand();
         }
+
+        /// <summary>
+        /// The associated provider factory for derived class.
+        /// </summary>
+        virtual protected DbProviderFactory DbProviderFactory
+        {
+            get
+            {
+                return null;
+            }
+        }
+
+        internal DbProviderFactory ProviderFactory
+        {
+            get
+            {
+                return DbProviderFactory;
+            }
+        }
     }
 }

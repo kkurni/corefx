@@ -162,5 +162,17 @@ namespace System.Data.Common
         {
             return string.IsNullOrEmpty(str);
         }
+        
+        //
+        // DbProviderFactories
+        //
+        static internal ArgumentException ConfigProviderNotFound()
+        {
+            return Argument(SR.Format(SR.ConfigProviderNotFound));
+        }
+        static internal ArgumentException ConfigProviderKeyAlreadyExists()
+        {
+            return Argument(SR.Format(SR.ConfigProviderKeyAlreadyExists));
+        }
     }
 }

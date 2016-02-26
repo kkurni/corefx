@@ -135,6 +135,12 @@
   <data name="ADP_KeywordNotSupported" xml:space="preserve">
     <value>Keyword not supported: '{0}'.</value>
   </data>
+  <data name="ConfigProviderKeyAlreadyExists" xml:space="preserve">
+    <value>A config with the same key already exists.</value>
+  </data>
+  <data name="ConfigProviderNotFound" xml:space="preserve">
+    <value>Unable to find the requested .Net Framework Data Provider.  It may not be installed.</value>
+  </data>
   <data name="SqlConvert_ConvertFailed" xml:space="preserve">
     <value> Cannot convert object of type '{0}' to object of type '{1}'.</value>
   </data>
