@@ -35,17 +35,17 @@ namespace System.Data.Common
     {
         internal static readonly Dictionary<string, Func<DbProviderFactory>> Dictionary = new Dictionary<string, Func<DbProviderFactory>>();
 
-        public static void Add(string key, Func<DbProviderFactory> constructorDelegate)
+        public static void Add(string providerInvariantName, Func<DbProviderFactory> constructorDelegate)
         {
-            ADP.CheckArgumentNull(key, nameof(key));
+            ADP.CheckArgumentNull(providerInvariantName, nameof(providerInvariantName));
             ADP.CheckArgumentNull(constructorDelegate, nameof(constructorDelegate));
 
-            if (Dictionary.ContainsKey(key))
+            if (Dictionary.ContainsKey(providerInvariantName))
             {
                 throw ADP.ConfigProviderKeyAlreadyExists();
             }
 
-            Dictionary.Add(key, constructorDelegate);
+            Dictionary.Add(providerInvariantName, constructorDelegate);
         }
     }
 }
