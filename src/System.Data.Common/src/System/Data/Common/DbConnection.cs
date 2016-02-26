@@ -172,7 +172,7 @@ namespace System.Data.Common
         /// <summary>
         /// The associated provider factory for derived class.
         /// </summary>
-        virtual protected DbProviderFactory DbProviderFactory
+        protected virtual DbProviderFactory DbProviderFactory
         {
             get
             {

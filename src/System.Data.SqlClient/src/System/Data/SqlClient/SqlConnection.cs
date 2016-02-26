@@ -1186,7 +1186,7 @@ namespace System.Data.SqlClient
 
         /*
                 //TODO: Override DbProviderFactory after adding a contract
-                override protected DbProviderFactory DbProviderFactory
+                protected override DbProviderFactory DbProviderFactory
                 {
                     get
                     {
