@@ -47,6 +47,13 @@ namespace System.Data.Common
 
             Dictionary.Add(providerInvariantName, constructorDelegate);
         }
+
+        public static string[] GetProviderInvariantNames()
+        {
+            var keys = new string[Dictionary.Count];
+            Dictionary.Keys.CopyTo(keys, 0);
+            return keys;
+        }
     }
 }
 
